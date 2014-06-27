@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navi - Plan less. Do more.</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="css/text">
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+    <div class="main-menu">
+        <div class="header">
+            <div id="logo">
+                <a href="#home"><img src="images/logo.png" alt="Navi"></a>
+            </div>
+            <div id="social">
+                <ul id="icon-list">
+                    <a href="http://www.facebook.com" target="_blank"><li id="fbook"></li></a>
+                    <a href="http://www.twitter.com" target="_blank"><li id="twitter"></li></a>
+                    <a href="http://www.google.com" target="_blank"><li id="gplus"></li></a>
+                </ul>
+            </div>
+        </div>
+        <nav class="button-menu expanded-menu" role="navigation">
+            <a class="app" href="#app">
+                <span class="button-icon">
+                    <img src="images/app-icon.png" alt="App">
+                </span>
+                <span class="button-text">App</span>
+            </a>
+            <a class="discover" href="#discover">
+                <span class="button-icon">
+                    <img src="images/disc-icon.png" alt="Discover">
+                </span>
+                <span class="button-text">Discover</span>
+            </a>
+            <a class="about" href="#about">
+                <span class="button-icon">
+                    <img src="images/about-icon.png" alt="About">
+                </span>
+                <span class="button-text">About</span>
+            </a>
+            <a class="locations" href="#locations">
+                <span class="button-icon">
+                    <img src="images/loc-icon.png" alt="Locations">
+                </span>
+                <span class="button-text">Locations</span>
+            </a>
+            <a class="contact" href="#contact">
+                <span class="button-icon">
+                    <img src="images/contact-icon.png" alt="Contact">
+                </span>
+                <span class="button-text">Contact</span>
+            </a>
+        </nav>
+    </div>
+    <section id="home">
+        <div class="content">
+            <h3>Don't know what to do today? Just ask Navi, your pocket concierge.</h3>
+            <form class="form-inline" role="form" method="post" onsubmit="return dealsubmit(true)">
+                <div class="form-group">
+                    <label class="sr-only" for="email-signup">Email address</label>
+                    <input type="email" class="form-control" id="email-signup" placeholder="Enter email">
+                </div>
+                <button type="submit" class="btn btn-default">Go</button>
+            </form>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <div class="arrow">
+        <a href="#"><div class="arrow-down"></div></a>
+        <a href="#home"><div class="arrow-up hidden"></div></a>
+    </div>
+    <section id="app">
+        <div class="content">
+            <div id="iphone-app">
+                <img src="images/iphone-3screen.png" alt="Iphone App"/>
+            </div>
+            <div id="app-desc">
+                <h1>Meet Navi</h1>
+                <p>Your go to app when you don't know what to do.</p>
+            </div>
+        </div>
+    </section>
+    <section id="discover">
+        <div class="content">
+            <div class="disc-desc">
+                <h3>Personalized suggestions based on:</h3>
+            </div>
+            <div id="disc-icons">
+                <div class="icon-row">
+                    <div class="feature-icon">
+                        <div class="feature" id="weather-icon"></div>
+                        <span class="lower-style">Weather</span>
+                    </div>
+                    <div class="feature-icon">
+                        <div class="feature" id="time-icon"></div>
+                        <span class="lower-style">Time</span>
+                    </div>
+                    <div class="feature-icon">
+                        <div class="feature" id="location-icon"></div>
+                        <span class="lower-style">Location</span>
+                    </div>
+                    <div class="feature-icon">
+                        <div class="feature" id="mood-icon"></div>
+                        <span class="lower-style">Mood</span>
+                    </div>
+                    <div class="feature-icon">
+                        <div class="feature" id="price-icon"></div>
+                        <span class="lower-style">Price</span>
+                    </div>
+                    <div class="feature-icon">
+                        <div class="feature" id="occasion-icon"></div>
+                        <span class="lower-style">Occasion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="content">
+        </div>
+    </section>
+    <section id="locations">
+        <div class="content">
+        </div>
+    </section>
+    <section id="contact">
+        <div class="content">
+        </div>
+    </section>
+    <div id="footer">
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+</body>
+</html>

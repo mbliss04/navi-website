@@ -1,0 +1,287 @@
+/* Variables */
+body {
+  color: white;
+  font-family: 'satelliteregular', Arial, sans-serif;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+section {
+  display: block;
+  overflow: hidden;
+}
+.content {
+  margin-top: 20px;
+}
+.lower-style {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  color: white;
+}
+.hidden {
+  visibility: hidden;
+}
+.no-display {
+  display: none;
+}
+.main-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: auto;
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+}
+.main-menu .header {
+  margin: 0;
+  padding: 0;
+  height: 65px;
+  display: block;
+  width: 100%;
+}
+.main-menu .header #logo {
+  float: left;
+  width: 35%;
+}
+.main-menu .header #logo img {
+  margin: 7.5px 0 7.5px 20px;
+}
+.main-menu .header #social {
+  width: 65%;
+  float: left;
+}
+.main-menu .header #social #icon-list {
+  padding-right: 20px;
+}
+.main-menu .header #social #icon-list li {
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 7.5px;
+}
+.main-menu .header #social #icon-list #fbook {
+  background: url(../images/fbook.png) right;
+}
+.main-menu .header #social #icon-list #fbook:hover {
+  background-position: 0 50px;
+}
+.main-menu .header #social #icon-list #gplus {
+  background: url(../images/gplus.png) right;
+}
+.main-menu .header #social #icon-list #gplus:hover {
+  background-position: 0 50px;
+}
+.main-menu .header #social #icon-list #twitter {
+  background: url(../images/twitter.png) right;
+}
+.main-menu .header #social #icon-list #twitter:hover {
+  background-position: 0 50px;
+}
+.main-menu .button-menu a {
+  height: 150px;
+  float: left;
+  display: block;
+  width: 20%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-menu .button-menu a .button-icon {
+  width: 100%;
+  padding: 20px 0 5px 0;
+}
+.main-menu .button-menu a span {
+  float: left;
+  width: 100%;
+}
+.main-menu .button-menu a .button-text {
+  padding-top: 5px;
+  letter-spacing: 0.1em;
+}
+.main-menu .button-menu .app {
+  background-color: #cecece;
+}
+.main-menu .button-menu .app:hover {
+  background-color: #d8c4c4;
+}
+.main-menu .button-menu .discover {
+  background-color: #756f71;
+}
+.main-menu .button-menu .discover:hover {
+  background-color: #80646d;
+}
+.main-menu .button-menu .about {
+  background-color: #413d42;
+}
+.main-menu .button-menu .about:hover {
+  background-color: #453748;
+}
+.main-menu .button-menu .locations {
+  background-color: #f05252;
+}
+.main-menu .button-menu .locations:hover {
+  background-color: #dd6565;
+}
+.main-menu .button-menu .contact {
+  background-color: #dbcdb8;
+}
+.main-menu .button-menu .contact:hover {
+  background-color: #d3cbc0;
+}
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -35px;
+  text-align: center;
+  opacity: .3;
+}
+.arrow .arrow-down {
+  background: url(../images/arrow-down.png) center;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.arrow .arrow-up {
+  background: url(../images/arrow-up.png) center;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+#home {
+  background: url(../images/concierge.jpg) top center;
+}
+#home .content {
+  text-align: center;
+  margin-top: 360px;
+}
+#home .content h2,
+#home .content h3 {
+  color: white;
+}
+#home .content form {
+  margin: 30px;
+}
+#home .content form input {
+  width: 300px;
+}
+#home .content form button {
+  color: white;
+  border-color: #f05252;
+  background-color: #f05252;
+  text-transform: uppercase;
+}
+#app {
+  color: #413d42;
+  background-color: #cecece;
+}
+#app #iphone-app {
+  float: left;
+  margin-left: 10%;
+  width: 30%;
+}
+#app #app-desc {
+  text-align: center;
+  float: left;
+  width: 50%;
+  margin-right: 10%;
+  padding: 30px;
+}
+#app #app-desc p {
+  font-size: 21px;
+}
+#discover {
+  background-color: #756f71;
+}
+#discover .content {
+  margin-top: 30px;
+  text-align: center;
+}
+#discover .content .disc-desc {
+  float: left;
+  width: 100%;
+}
+#discover .content #disc-icons {
+  position: fixed;
+  left: 50%;
+  /* align left edge with center of viewport */
+
+  top: ;
+  width: 840px;
+  margin-left: -420px;
+}
+#discover .content #disc-icons .icon-row {
+  display: inline-block;
+}
+#discover .content #disc-icons .icon-row .feature-icon {
+  float: left;
+  width: 100px;
+  margin: 20px;
+}
+#discover .content #disc-icons .icon-row .feature-icon span {
+  float: left;
+  width: 100px;
+  margin-top: 10px;
+}
+#discover .content #disc-icons .icon-row .feature {
+  position: absolute;
+  float: left;
+  background: url(../images/feature-gradient.png) 0px 0px;
+  width: 100px;
+  height: 100px;
+}
+#discover .content #disc-icons .icon-row #weather-icon:hover {
+  background-position: -100px 0px;
+}
+#discover .content #disc-icons .icon-row #time-icon {
+  background-position: 0px 100px;
+}
+#discover .content #disc-icons .icon-row #time-icon:hover {
+  background-position: -100px 100px;
+}
+#discover .content #disc-icons .icon-row #mood-icon {
+  background-position: 0px 200px;
+}
+#discover .content #disc-icons .icon-row #mood-icon:hover {
+  background-position: -100px 200px;
+}
+#discover .content #disc-icons .icon-row #price-icon {
+  background-position: 0px 300px;
+}
+#discover .content #disc-icons .icon-row #price-icon:hover {
+  background-position: -100px 300px;
+}
+#discover .content #disc-icons .icon-row #location-icon {
+  background-position: 0px 400px;
+}
+#discover .content #disc-icons .icon-row #location-icon:hover {
+  background-position: -100px 400px;
+}
+#discover .content #disc-icons .icon-row #occasion-icon {
+  background-position: 0px 500px;
+}
+#discover .content #disc-icons .icon-row #occasion-icon:hover {
+  background-position: -100px 500px;
+}
+#about {
+  background-color: #413d42;
+}
+#locations {
+  background-color: #f05252;
+  background: url(../images/skyline.png) center bottom;
+}
+#contact {
+  background-color: #dbcdb8;
+}

@@ -1,0 +1,307 @@
+/* Variables */
+@ltgrey: #CECECE;
+@midgrey: #756F71;
+@drkgrey: #413D42;
+@pink: #F05252;
+@beige: #DBCDB8;
+@condensed-nav: 95px;
+@expanded-nav: 215px;
+@icon-position: 180px;
+
+body {
+    color: white;
+    font-family: 'satelliteregular', Arial, sans-serif;
+}
+
+a, a:link, a:visited, 
+a:hover, a:active {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+section {
+    display: block;
+    overflow: hidden;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.lower-style {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;    
+}
+
+.no-display {
+    display: none;
+}
+
+.main-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: auto;
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    .header {
+        margin: 0;
+        padding: 0;
+        height: 65px;
+        display: block;
+        width: 100%;
+        #logo {
+            float: left;
+            width: 35%;
+            img {
+                margin: 7.5px 0 7.5px 20px;
+            }
+        }
+        #social {
+            width: 65%;
+            float: left;
+            #icon-list {
+                padding-right: 20px;
+                li {
+                    float: right;
+                    width: 50px;
+                    height: 50px;
+                    margin: 7.5px;
+                }
+                #fbook {
+                    background: url(../images/fbook.png) right;
+                }
+                #fbook:hover {
+                    background-position: 0 50px;
+                }
+                #gplus {
+                    background: url(../images/gplus.png) right;
+                }
+                #gplus:hover {
+                    background-position: 0 50px;
+                }
+                #twitter {
+                    background: url(../images/twitter.png) right;
+                }
+                #twitter:hover {
+                    background-position: 0 50px;
+                }
+            }
+        }
+    }
+    .button-menu {
+        a {
+            height: 150px;
+            float: left;
+            display: block;
+            width: 20%;
+            text-align: center;
+            text-transform: uppercase;
+            .button-icon {
+                width: 100%;
+                padding: 20px 0 5px 0;
+            }
+            span {
+                float: left;
+                width: 100%;
+            }
+            .button-text {
+                padding-top: 5px;
+                letter-spacing: 0.1em;
+            }
+        }
+        .app {
+            background-color: @ltgrey;
+        }
+        .app:hover {
+            background-color: saturate(@ltgrey, 20%);
+        }
+        .discover {
+            background-color: @midgrey;
+        }
+        .discover:hover {
+            background-color: saturate(@midgrey, 10%);
+        }
+        .about {
+            background-color: @drkgrey;
+        }
+        .about:hover {
+            background-color: saturate(@drkgrey, 10%);
+        }
+        .locations {
+            background-color: @pink;
+        }
+        .locations:hover {
+            background-color: desaturate(@pink, 20%);
+        }
+        .contact {
+            background-color: @beige;
+        }
+        .contact:hover {
+            background-color: desaturate(@beige, 15%);
+        }
+    }
+}
+
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -35px;
+    text-align: center;
+    opacity: .3;
+    .arrow-down {
+        background: url(../images/arrow-down.png) center;
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+    }
+    .arrow-up {
+        background: url(../images/arrow-up.png) center;
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+    }
+}
+
+#home {
+    background: url(../images/concierge.jpg) top center;
+    .content {
+        text-align: center; 
+        margin-top: 360px;
+        h2, h3 {
+            color: white;
+        }
+        form {
+            margin: 30px;
+            input {
+                width: 300px;
+            }
+            button {
+                color: white;
+                border-color: @pink;
+                background-color: @pink;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+#app {
+    color: @drkgrey;
+    background-color: @ltgrey;
+    #iphone-app {
+        float: left;
+        margin-left: 10%;
+        width: 30%;
+    }
+    #app-desc {
+        text-align: center;
+        float: left;
+        width: 50%;
+        margin-right: 10%;
+        padding: 30px;
+        p {
+            font-size: 21px;
+        }
+    }
+}
+
+#discover {
+    background-color: @midgrey;
+    .content {
+        margin-top: 30px;
+        text-align: center;
+        .disc-desc {
+            float: left;
+            width: 100%;
+        }
+        #disc-icons {
+            position: fixed;
+            left: 50%; /* align left edge with center of viewport */
+            top: ;
+            width: 840px;
+            margin-left: -420px;
+            .icon-row {
+                display: inline-block;
+                .feature-icon {
+                    float: left;
+                    width: 100px;
+                    margin: 20px;
+                    span {
+                        float: left;
+                        width: 100px;
+                        margin-top: 10px;
+                    }
+                }
+                .feature {
+                    position: absolute;
+                    float: left;
+                    background: url(../images/feature-gradient.png) 0px 0px;
+                    width: 100px;
+                    height: 100px;
+                }
+                #weather-icon:hover {
+                    background-position: -100px 0px;
+                }
+                #time-icon {
+                    background-position: 0px 100px;
+                }
+                #time-icon:hover {
+                    background-position: -100px 100px;
+                }
+                #mood-icon {
+                    background-position: 0px 200px;
+                }
+                #mood-icon:hover {
+                    background-position: -100px 200px;
+                }
+                #price-icon {
+                    background-position: 0px 300px;
+                }
+                #price-icon:hover {
+                    background-position: -100px 300px;
+                }
+                #location-icon {
+                    background-position: 0px 400px;
+                }
+                #location-icon:hover {
+                    background-position: -100px 400px;
+                }
+                #occasion-icon {
+                    background-position: 0px 500px;
+                }
+                #occasion-icon:hover {
+                    background-position: -100px 500px;
+                }
+            }
+        }
+    }
+}
+
+#about {
+    background-color: @drkgrey;
+}
+
+#locations {
+    background-color: @pink;
+    background: url(../images/skyline.png) center bottom;
+}
+
+#contact {
+    background-color: @beige;
+}
