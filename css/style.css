@@ -1,7 +1,14 @@
 /* Variables */
 body {
   color: white;
+}
+h3 {
+  font-weight: 400;
+}
+.satellite {
   font-family: 'satelliteregular', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 a,
 a:link,
@@ -22,13 +29,6 @@ section {
 }
 .content {
   margin-top: 20px;
-}
-.lower-style {
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 0.1em;
-  text-transform: lowercase;
-  color: white;
 }
 .hidden {
   visibility: hidden;
@@ -96,7 +96,6 @@ section {
   display: block;
   width: 20%;
   text-align: center;
-  text-transform: uppercase;
 }
 .main-menu .button-menu a .button-icon {
   width: 100%;
@@ -108,7 +107,6 @@ section {
 }
 .main-menu .button-menu a .button-text {
   padding-top: 5px;
-  letter-spacing: 0.1em;
 }
 .main-menu .button-menu .app {
   background-color: #cecece;
@@ -213,15 +211,6 @@ section {
   float: left;
   width: 100%;
 }
-#discover .content #disc-icons {
-  position: fixed;
-  left: 50%;
-  /* align left edge with center of viewport */
-
-  top: ;
-  width: 840px;
-  margin-left: -420px;
-}
 #discover .content #disc-icons .icon-row {
   display: inline-block;
 }
@@ -236,44 +225,46 @@ section {
   margin-top: 10px;
 }
 #discover .content #disc-icons .icon-row .feature {
-  position: absolute;
   float: left;
-  background: url(../images/feature-gradient.png) 0px 0px;
+  background: url(../images/feature-icons.png) 0px 0px;
   width: 100px;
   height: 100px;
 }
+#discover .content #disc-icons .icon-row #weather-icon {
+  background-position: -50px -50px;
+}
 #discover .content #disc-icons .icon-row #weather-icon:hover {
-  background-position: -100px 0px;
+  background-position: 150px -50px;
 }
 #discover .content #disc-icons .icon-row #time-icon {
-  background-position: 0px 100px;
+  background-position: -50px 150px;
 }
 #discover .content #disc-icons .icon-row #time-icon:hover {
-  background-position: -100px 100px;
+  background-position: 150px 150px;
 }
 #discover .content #disc-icons .icon-row #mood-icon {
-  background-position: 0px 200px;
+  background-position: -50px 350px;
 }
 #discover .content #disc-icons .icon-row #mood-icon:hover {
-  background-position: -100px 200px;
+  background-position: 150px 350px;
 }
 #discover .content #disc-icons .icon-row #price-icon {
-  background-position: 0px 300px;
+  background-position: -50px 550px;
 }
 #discover .content #disc-icons .icon-row #price-icon:hover {
-  background-position: -100px 300px;
+  background-position: 150px 550px;
 }
 #discover .content #disc-icons .icon-row #location-icon {
-  background-position: 0px 400px;
+  background-position: -50px 750px;
 }
 #discover .content #disc-icons .icon-row #location-icon:hover {
-  background-position: -100px 400px;
+  background-position: 150px 750px;
 }
 #discover .content #disc-icons .icon-row #occasion-icon {
-  background-position: 0px 500px;
+  background-position: -50px 950px;
 }
 #discover .content #disc-icons .icon-row #occasion-icon:hover {
-  background-position: -100px 500px;
+  background-position: 150px 950px;
 }
 #about {
   background-color: #413d42;

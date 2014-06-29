@@ -10,7 +10,16 @@
 
 body {
     color: white;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.satellite {
     font-family: 'satelliteregular', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 a, a:link, a:visited, 
@@ -32,14 +41,6 @@ section {
 
 .content {
     margin-top: 20px;
-}
-
-.lower-style {
-    font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 0.1em;
-    text-transform: lowercase;
-    color: white;
 }
 
 .hidden {
@@ -110,7 +111,6 @@ section {
             display: block;
             width: 20%;
             text-align: center;
-            text-transform: uppercase;
             .button-icon {
                 width: 100%;
                 padding: 20px 0 5px 0;
@@ -121,7 +121,6 @@ section {
             }
             .button-text {
                 padding-top: 5px;
-                letter-spacing: 0.1em;
             }
         }
         .app {
@@ -231,11 +230,6 @@ section {
             width: 100%;
         }
         #disc-icons {
-            position: fixed;
-            left: 50%; /* align left edge with center of viewport */
-            top: ;
-            width: 840px;
-            margin-left: -420px;
             .icon-row {
                 display: inline-block;
                 .feature-icon {
@@ -249,44 +243,46 @@ section {
                     }
                 }
                 .feature {
-                    position: absolute;
                     float: left;
-                    background: url(../images/feature-gradient.png) 0px 0px;
+                    background: url(../images/feature-icons.png) 0px 0px;
                     width: 100px;
                     height: 100px;
                 }
+                #weather-icon {
+                    background-position: -50px -50px;
+                }
                 #weather-icon:hover {
-                    background-position: -100px 0px;
+                    background-position: 150px -50px;
                 }
                 #time-icon {
-                    background-position: 0px 100px;
+                    background-position: -50px 150px;
                 }
                 #time-icon:hover {
-                    background-position: -100px 100px;
+                    background-position: 150px 150px;
                 }
                 #mood-icon {
-                    background-position: 0px 200px;
+                    background-position: -50px 350px;
                 }
                 #mood-icon:hover {
-                    background-position: -100px 200px;
+                    background-position: 150px 350px;
                 }
                 #price-icon {
-                    background-position: 0px 300px;
+                    background-position: -50px 550px;
                 }
                 #price-icon:hover {
-                    background-position: -100px 300px;
+                    background-position: 150px 550px;
                 }
                 #location-icon {
-                    background-position: 0px 400px;
+                    background-position: -50px 750px;
                 }
                 #location-icon:hover {
-                    background-position: -100px 400px;
+                    background-position: 150px 750px;
                 }
                 #occasion-icon {
-                    background-position: 0px 500px;
+                    background-position: -50px 950px;
                 }
                 #occasion-icon:hover {
-                    background-position: -100px 500px;
+                    background-position: 150px 950px;
                 }
             }
         }
