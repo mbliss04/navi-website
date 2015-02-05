@@ -1,0 +1,51 @@
+@import "vars";
+@import "mixins";
+
+/* Media Queries */
+
+@media (max-width: 400px) {
+    #home {
+        background: url(../images/concierge-small.jpg) top right no-repeat;
+        div {
+            margin-top: 300px;
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    }
+    #locations {
+        background: url(../images/boston-skyline-small.jpg) right center no-repeat;
+    }
+}
+
+/* Tablet */
+@media (min-width: 400px) and (max-width: 670px) {
+    #home {
+        background: url(../images/concierge-tablet.jpg) top right no-repeat;
+        div {
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    }
+    #locations {
+        background: url(../images/boston-skyline-tablet.jpg) right center no-repeat;
+    }
+}
+
+/* Large Screen Size */
+@media (min-width: 1500px) {
+    #home {
+        background: url(../images/concierge-large.jpg) top right no-repeat;
+    }
+    #app {
+        #iphone-app {
+            background: url(../images/iphone-white-large.png) center top no-repeat;
+            width: 800px;
+            height: 800px;
+        }
+    }
+    #locations {
+        background: url(../images/boston-skyline-large.jpg) right center no-repeat;
+    }
+}

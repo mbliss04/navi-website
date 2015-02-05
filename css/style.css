@@ -1,3 +1,9 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 /* Variables */
 body {
   color: white;
@@ -25,10 +31,15 @@ ul {
 }
 section {
   display: block;
+  height: 800px;
   overflow: hidden;
 }
 .content {
   margin-top: 20px;
+}
+.two-col {
+  float: left;
+  width: 50%;
 }
 .hidden {
   visibility: hidden;
@@ -108,11 +119,13 @@ section {
 .main-menu .button-menu a .button-text {
   padding-top: 5px;
 }
+.main-menu .button-menu a:hover {
+  -webkit-animation: background-color 300ms 0s ease-in-out;
+  -moz-animation: background-color 300ms 0s ease-in-out;
+  -ms-animation: background-color 300ms 0s ease-in-out;
+}
 .main-menu .button-menu .app {
   background-color: #cecece;
-}
-.main-menu .button-menu .app:hover {
-  background-color: #d8c4c4;
 }
 .main-menu .button-menu .discover {
   background-color: #756f71;
@@ -139,6 +152,7 @@ section {
   background-color: #d3cbc0;
 }
 .arrow {
+  z-index: 50;
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -150,13 +164,11 @@ section {
   background: url(../images/arrow-down.png) center;
   width: 70px;
   height: 70px;
-  z-index: 1;
 }
 .arrow .arrow-up {
   background: url(../images/arrow-up.png) center;
   width: 70px;
   height: 70px;
-  z-index: 1;
 }
 #home {
   background: url(../images/concierge.jpg) top center;
@@ -181,24 +193,26 @@ section {
   background-color: #f05252;
   text-transform: uppercase;
 }
+#home .content #email-success {
+  z-index: 2;
+  margin-top: 30px;
+  display: none;
+}
 #app {
   color: #413d42;
   background-color: #cecece;
 }
-#app #iphone-app {
-  float: left;
-  margin-left: 10%;
-  width: 30%;
+#app .content {
+  width: 75%;
+  margin: auto;
 }
-#app #app-desc {
+#app .content #iphone-app img {
+  vertical-align: bottom;
+  margin: auto;
+}
+#app .content #app-desc {
   text-align: center;
-  float: left;
-  width: 50%;
-  margin-right: 10%;
-  padding: 30px;
-}
-#app #app-desc p {
-  font-size: 21px;
+  margin-top: 50px;
 }
 #discover {
   background-color: #756f71;
@@ -211,68 +225,58 @@ section {
   float: left;
   width: 100%;
 }
-#discover .content #disc-icons .icon-row {
-  display: inline-block;
+#discover .content #disc-icons {
+  display: block;
+  text-align: center;
+  max-width: 1000px;
+  height: 250px;
+  margin: 30px auto 0;
 }
-#discover .content #disc-icons .icon-row .feature-icon {
+#discover .content #disc-icons .feature-icon {
   float: left;
-  width: 100px;
-  margin: 20px;
+  width: 16.66%;
+  height: 120px;
+  opacity: 0;
+  margin-top: 600px;
 }
-#discover .content #disc-icons .icon-row .feature-icon span {
+#discover .content #disc-icons .feature-icon span {
+  width: 100%;
   float: left;
-  width: 100px;
   margin-top: 10px;
-}
-#discover .content #disc-icons .icon-row .feature {
-  float: left;
-  background: url(../images/feature-icons.png) 0px 0px;
-  width: 100px;
-  height: 100px;
-}
-#discover .content #disc-icons .icon-row #weather-icon {
-  background-position: -50px -50px;
-}
-#discover .content #disc-icons .icon-row #weather-icon:hover {
-  background-position: 150px -50px;
-}
-#discover .content #disc-icons .icon-row #time-icon {
-  background-position: -50px 150px;
-}
-#discover .content #disc-icons .icon-row #time-icon:hover {
-  background-position: 150px 150px;
-}
-#discover .content #disc-icons .icon-row #mood-icon {
-  background-position: -50px 350px;
-}
-#discover .content #disc-icons .icon-row #mood-icon:hover {
-  background-position: 150px 350px;
-}
-#discover .content #disc-icons .icon-row #price-icon {
-  background-position: -50px 550px;
-}
-#discover .content #disc-icons .icon-row #price-icon:hover {
-  background-position: 150px 550px;
-}
-#discover .content #disc-icons .icon-row #location-icon {
-  background-position: -50px 750px;
-}
-#discover .content #disc-icons .icon-row #location-icon:hover {
-  background-position: 150px 750px;
-}
-#discover .content #disc-icons .icon-row #occasion-icon {
-  background-position: -50px 950px;
-}
-#discover .content #disc-icons .icon-row #occasion-icon:hover {
-  background-position: 150px 950px;
 }
 #about {
   background-color: #413d42;
 }
+#about #lohtus-overlay {
+  z-index: 1;
+  position: absolute;
+  background: url(../images/lohtus-trans.png) top center;
+  width: 1000px;
+  height: 800px;
+  left: 50%;
+  margin-left: -500px;
+  opacity: .5;
+}
+#about .content {
+  z-index: 3;
+}
+#about .content .founder-desc {
+  margin: auto;
+  text-align: center;
+}
 #locations {
   background-color: #f05252;
-  background: url(../images/skyline.png) center bottom;
+  background: url(../images/skylinetrans.png) center bottom;
 }
 #contact {
   background-color: #dbcdb8;
+}
+#contact form {
+  width: 300px;
+}
+#contact form button {
+  color: white;
+  border-color: #f05252;
+  background-color: #f05252;
+  text-transform: uppercase;
 }

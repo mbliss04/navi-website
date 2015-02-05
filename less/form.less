@@ -1,0 +1,50 @@
+@import "vars";
+
+form {
+    font-family: Arial, sans-serif;
+    color: #404040;
+    line-height: 14px;
+    input, textarea {
+        font-size: 14px;
+        border: none;
+        height: 2.8em;
+        .border-radius(3px);
+        .transition(300ms, ease);
+        padding: 0;
+        text-indent: 10px;
+        height: 2.5em;
+    }
+    input:focus, textarea:focus {
+        .transition(300ms, ease);
+        outline: none;
+        border-color: @pink;
+        box-shadow: 0 0 5px @pink;
+    }
+    button {
+        cursor: pointer;
+        font-size: 14px;
+        position: relative;
+        height: 2.5em;
+        .border-radius(3px);
+        background-color: @pink;
+        border: 1px solid @pink;
+        width: 10%;
+        color: white;
+        .satellite();
+        .gradientAuto(@pink, -2);
+    }
+    button:hover {
+        .gradientAuto(@pink, -5);
+    }
+}
+
+.signup-success {
+    background: rgba(255, 255, 255, 0.6);
+    .border-radius(3px);
+    height: 50px;
+    display: inline-block;
+    margin: auto;
+    margin-top: 15px;
+    line-height: 50px;
+    padding: 0 20px;
+}

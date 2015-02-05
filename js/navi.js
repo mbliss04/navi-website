@@ -6,6 +6,8 @@ $(document).ready(function(){
     nav_bottom = $('.main-menu').height();
     feature_icons = $('.feature-icon');
     discover_section = $('#discover').offset().top;
+    sections = $('.page-section');
+    section_index = 0;
 
     $('#app').waypoint(function(direction) {
         if (direction == 'down') {
@@ -23,32 +25,32 @@ $(document).ready(function(){
         }
     }, { offset: nav_bottom });
 
-    /* set the sections to be window height */
+    /* animate feature section */
 
-    function resizeSections() {
-        $('section').css('height', screen.height);
+    $('#discover').waypoint(function() {
+        animateFeatureIcon(feature_icons);
+    }, { offset: nav_bottom });    
+
+    function animateFeatureIcon(icon) {
+        icon.animate({
+            'margin-top':'30px', 
+            'opacity': '1'
+        }, 1000, function(){
+            if (icon.id != 'occasion-icon') {
+                animateFeatureIcon(icon.next('.feature_icon'));
+            }
+        });
     }
 
-    resizeSections();
-
-    $(window).resize(function(){
-        resizeSections()
+    feature_icons.hover(function() {
+        $(this).animate({
+            'margin-top': "+=20",
+          }, 500);
+    }, function() {
+        $(this).animate({
+            'margin-top': "-=20",
+          }, 500);
     });
-
-    /* animate the feature icons */
-
-    $(window).bind('scroll',function(e){
-        parallaxScroll();
-    });
-
-    function parallaxScroll(){
-        var scrolled = $(window).scrollTop();
-        $('#app').css('top', (0-(scrolled*.25))+'px');
-        $('#iphone-app').css('top', (0-(scrolled*.75))+'px');
-        $('#disc-icons').css('top', (0-(scrolled*.75)) +'px');
-        $('#parallax-bg2').css('top',(0-(scrolled*.5))+'px');
-        $('#discover').css('top', (0-(scrolled*.25))+'px');
-    }
 
     /* On scroll functionality */
 
@@ -72,8 +74,7 @@ $(document).ready(function(){
         }
     }
 
-
-    /* scrolling functionality */
+    /* Bind scrolling functionality */
 
     $("a[href='#home']").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -84,7 +85,6 @@ $(document).ready(function(){
         link = "a[href='" + $(this).attr('href') + "']";
         $(link).click(function() {
             $("html, body").animate({ scrollTop: $($(this).attr('href')).offset().top - 95}, "slow");
-            return false;
         });
     });
 
@@ -103,9 +103,26 @@ $(document).ready(function(){
     });
 
     $('.arrow').click(function() {
-        var nextSection = $(this).next("section");
-        $("html, body").animate({ scrollTop: nextSection.offset().top}, "slow");
+        section_index = (section_index + 1) % sections.length;
+        var nextSectionTop = sections.eq(section_index).offset().top - 95;
+        $("html, body").animate({ scrollTop: nextSectionTop}, "slow");
         return false;
+    });
+
+    /* form submit */
+
+    $(document).on('submit', '.email-form', function(e) {
+         $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: $(this).serialize(),
+            success: function(html) {
+                // show success message
+                $(".email-form").fadeOut();
+                $('#email-success').fadeIn();
+            }
+        });
+        e.preventDefault();
     });
 
 });

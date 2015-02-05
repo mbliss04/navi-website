@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List of Users</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <!-- CSS -->
+    <link rel="stylesheet" type="css/text" href="css/screen.css" >
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+    <style type="text/css">
+        body { background: #efefef; text-align: center; }
+        h1 { color: #000; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+<!--     <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div> -->
+    <h1>List of users</h1>
+    <div id="users"></div>
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            url: 'listusers.php',
+            type:'GET',
+            dataType: 'json',
+            error: function(){
+                $('#users').append('<p>No data received.</p>');
+            },
+            success: function(results){
+                console.log(results)
+                $('#users').append(results);
+            }
+        });
+    </script>
+</body>
+</html>

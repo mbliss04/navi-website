@@ -1,0 +1,238 @@
+@import "vars";
+@import "mixins";
+
+/* Regular Page Styling */
+
+#home {
+    background: url(../images/concierge.jpg) top right no-repeat;
+    z-index: 6;
+    div {
+        margin-top: @homecontent;
+        h3 {
+            line-height: 2em;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 100;
+        }
+        form {
+            text-align: center;
+            width: 500px;
+            height: auto;
+            position: absolute;
+            display: block;
+            left: 50%;
+            margin-left: -250px;
+            line-height: 2.5em;
+            input {
+                width: 60%;
+            }
+            button {
+                padding: 0;
+                margin-left: 0;
+                position: relative;
+                left: -7px;
+                .border-radiuses(3px, 3px, 0px, 0px);
+            }
+        }
+    }
+}
+
+#app {
+    z-index: 5;
+    background-color: @ltgrey;
+    text-align: center;
+    color: @drkgrey;
+    #iphone-app {
+        background: url(../images/iphone-white.png) center top no-repeat;
+        width: 600px;
+        height: 600px;
+        margin: auto;
+    }
+}
+
+#discover {
+    min-height: 400px;
+    z-index: 4;
+    background-color: @midgrey;
+    padding-top: 30px;
+    .satellite();
+    text-align: center;
+    .text-shadow(0px 1px 3px #555);
+    h1 {
+        margin: 20px;
+        border-bottom: 1px solid #fff;
+        .text-shadow(0px 3px 3px #222);
+    }
+    h4 {
+        font-size: 1.2em;
+    }
+    ul {
+        height: 170px;
+        margin: 30px auto 0;
+        display: block;
+        li {
+            .opacity(0);
+            display: block;
+            cursor: pointer;
+            &.feature {
+                background: url(../images/feature-icons.png) top left no-repeat;
+                display: inline-block;
+                height: 110px;
+                width: 110px;
+                margin: 5px;
+            }
+            &.weather {
+                background-position: -45px -45px;
+            }
+            &.weather:hover {
+                background-position: -245px -45px;
+            }
+            &.time {
+                background-position: -45px -1045px;
+            }
+            &.time:hover {
+                background-position: -245px -1045px;
+            }
+            &.location {
+                background-position: -45px -445px;
+            }
+            &.location:hover {
+                background-position: -245px -445px;
+            }
+            &.price {
+                background-position: -45px -645px;
+            }
+            &.price:hover {
+                background-position: -245px -645px;
+            }
+            &.mood {
+                background-position: -45px -845px;
+            }
+            &.mood:hover {
+                background-position: -245px -845px;
+            }
+            &.occasion {
+                background-position: -45px -245px;
+            }
+            &.occasion:hover {
+                background-position: -245px -245px;
+            }
+            label {
+                position: relative;
+                margin-top: 110px;
+                padding: 10px;
+                display: block;
+            }
+        }
+    }
+    .feature-desc-wrapper {
+        display: none;
+        #feature-description {
+            background: rgba(255,255,255,0.9);
+            color: @drkgrey;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            .helveticaneue();
+            .border-radius(10px);
+            .text-shadow(0 1px 3px rgba(255, 255, 255, 0.25));
+            .box-shadow(1px 1px 5px #888);
+        }
+    }
+}
+
+#team {
+    z-index: 3;
+    background-color: @drkgrey;
+    padding-top: 20px;
+    text-align: center;
+    h3 {
+        margin: 20px;
+        color: #fff;
+        .satellite();
+    }
+    ul {
+        text-align: center;
+        display: block;
+        li {
+            display: inline-block;
+            padding: 30px;
+            vertical-align: top;
+            span {
+                width: 100%;
+                float: left;
+                padding: 10px;
+                .satellite();
+            }
+            p {
+                width: 300px;
+                margin: 0 auto;
+            }
+        }
+        img {
+            .border-radius(50%);
+            border: 1px solid transparent;
+            .transition(border 300ms 0 ease-in-out);
+            &:hover {
+                border: 1px solid #efefef;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#locations {
+    background: url(../images/boston-skyline.jpg) right center no-repeat;
+    z-index: 2;
+    background-color: @pink;
+    text-align: center;
+    padding-top: 100px;
+    .satellite();
+    h1 {
+        font-size: 6em;
+        .text-shadow(0 1px 3px rgba(255, 255, 255, 0.25));
+    }
+    h4 {
+        border-top: 1.5px solid #fff;
+        font-size: 1.25em;
+    }
+}
+
+#contact {
+    z-index: 1;
+    background-color: @beige;
+    padding-top: 40px;
+    text-align: center;
+    h3 {
+        margin: 10px;
+        color: @drkgrey;
+        .satellite();
+    }
+    form {
+        margin: auto;
+        width: 400px;
+        padding: 20px 50px;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+        .border-radius(3px);
+        display: block;
+        input, textarea {
+            margin: 10px 5%;
+            width: 90%;
+            display: inline-block;
+        }
+        textarea {
+            padding-top: 10px;
+            min-height: 150px;
+            max-width: 90%;
+            max-height: 150px;
+        }
+        button {
+            margin: 0 25%;
+            width: 45%;
+        }
+    }
+}
+
+@import "mediaq";

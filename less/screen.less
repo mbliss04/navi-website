@@ -1,0 +1,81 @@
+@import "reset";
+@import "header";
+@import "nav";
+@import "form";
+@import "pages";
+@import "mixins";
+@import "vars";
+
+/* Regular Page Styling */
+
+body {
+    font-family: @mainfont;
+    color: white;
+    .helveticaneue();
+    overflow: hidden;
+}
+
+a, a:link, a:visited, 
+a:hover, a:active {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.3em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+section {
+    display: block;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    .box-shadow(0px 2px 5px black);
+}
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(../images/navi-loader.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+@media (max-width: 400px) {
+    section {
+        display: block;
+        min-height: 600px;
+        overflow: hidden;
+        .box-shadow(0px 2px 5px black);
+    }
+}

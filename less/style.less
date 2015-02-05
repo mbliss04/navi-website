@@ -1,3 +1,5 @@
+@import "mixins";
+
 /* Variables */
 @ltgrey: #CECECE;
 @midgrey: #756F71;
@@ -7,6 +9,7 @@
 @condensed-nav: 95px;
 @expanded-nav: 215px;
 @icon-position: 180px;
+@top-margin: 360px;
 
 body {
     color: white;
@@ -36,11 +39,17 @@ ul {
 
 section {
     display: block;
+    height: 800px;
     overflow: hidden;
 }
 
 .content {
     margin-top: 20px;
+}
+
+.two-col {
+    float: left;
+    width: 50%;
 }
 
 .hidden {
@@ -123,11 +132,14 @@ section {
                 padding-top: 5px;
             }
         }
+        a:hover {
+            .animation (background-color, 300ms, 0s, ease-in-out);
+        }
         .app {
             background-color: @ltgrey;
         }
         .app:hover {
-            background-color: saturate(@ltgrey, 20%);
+            //background-color: saturate(@ltgrey, 20%);
         }
         .discover {
             background-color: @midgrey;
@@ -157,6 +169,7 @@ section {
 }
 
 .arrow {
+    z-index: 50;
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -167,13 +180,11 @@ section {
         background: url(../images/arrow-down.png) center;
         width: 70px;
         height: 70px;
-        z-index: 1;
     }
     .arrow-up {
         background: url(../images/arrow-up.png) center;
         width: 70px;
         height: 70px;
-        z-index: 1;
     }
 }
 
@@ -197,25 +208,29 @@ section {
                 text-transform: uppercase;
             }
         }
+        #email-success {
+            z-index: 2;
+            margin-top: 30px;
+            display: none;
+        }
     }
 }
 
 #app {
     color: @drkgrey;
     background-color: @ltgrey;
-    #iphone-app {
-        float: left;
-        margin-left: 10%;
-        width: 30%;
-    }
-    #app-desc {
-        text-align: center;
-        float: left;
-        width: 50%;
-        margin-right: 10%;
-        padding: 30px;
-        p {
-            font-size: 21px;
+    .content {
+        width: 75%;
+        margin: auto;
+        #iphone-app {
+            img {
+                vertical-align: bottom;
+                margin: auto;
+            }
+        }
+        #app-desc {
+            text-align: center;
+            margin-top: 50px;
         }
     }
 }
@@ -230,59 +245,21 @@ section {
             width: 100%;
         }
         #disc-icons {
-            .icon-row {
-                display: inline-block;
-                .feature-icon {
+            display: block;
+            text-align: center;
+            max-width: 1000px;
+            height: 250px;
+            margin: 30px auto 0;
+            .feature-icon {
+                float: left;
+                width: 16.66%;
+                height: 120px;
+                opacity: 0;
+                margin-top: 600px;
+                span {
+                    width: 100%;
                     float: left;
-                    width: 100px;
-                    margin: 20px;
-                    span {
-                        float: left;
-                        width: 100px;
-                        margin-top: 10px;
-                    }
-                }
-                .feature {
-                    float: left;
-                    background: url(../images/feature-icons.png) 0px 0px;
-                    width: 100px;
-                    height: 100px;
-                }
-                #weather-icon {
-                    background-position: -50px -50px;
-                }
-                #weather-icon:hover {
-                    background-position: 150px -50px;
-                }
-                #time-icon {
-                    background-position: -50px 150px;
-                }
-                #time-icon:hover {
-                    background-position: 150px 150px;
-                }
-                #mood-icon {
-                    background-position: -50px 350px;
-                }
-                #mood-icon:hover {
-                    background-position: 150px 350px;
-                }
-                #price-icon {
-                    background-position: -50px 550px;
-                }
-                #price-icon:hover {
-                    background-position: 150px 550px;
-                }
-                #location-icon {
-                    background-position: -50px 750px;
-                }
-                #location-icon:hover {
-                    background-position: 150px 750px;
-                }
-                #occasion-icon {
-                    background-position: -50px 950px;
-                }
-                #occasion-icon:hover {
-                    background-position: 150px 950px;
+                    margin-top: 10px;
                 }
             }
         }
@@ -291,13 +268,42 @@ section {
 
 #about {
     background-color: @drkgrey;
+    #lohtus-overlay {
+        z-index: 1;
+        position: absolute;
+        background: url(../images/lohtus-trans.png) top center;
+        width: 1000px;
+        height: 800px;
+        left: 50%;
+        margin-left: -500px;
+        opacity: .5;
+    }
+    .content {
+        z-index: 3;
+        .founder-desc {
+            margin: auto;
+            text-align: center;
+            img {
+
+            }
+        }
+    }
 }
 
 #locations {
     background-color: @pink;
-    background: url(../images/skyline.png) center bottom;
+    background: url(../images/skylinetrans.png) center bottom;
 }
 
 #contact {
     background-color: @beige;
+    form {
+        width: 300px;
+        button {
+            color: white;
+            border-color: @pink;
+            background-color: @pink;
+            text-transform: uppercase;
+        }
+    }
 }
