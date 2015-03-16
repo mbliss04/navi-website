@@ -93,19 +93,19 @@ section {
                     margin: 7.5px;
                 }
                 #fbook {
-                    background: url(../images/fbook.png) right;
+                    background: url(../assets/fbook.png) right;
                 }
                 #fbook:hover {
                     background-position: 0 50px;
                 }
                 #gplus {
-                    background: url(../images/gplus.png) right;
+                    background: url(../assets/gplus.png) right;
                 }
                 #gplus:hover {
                     background-position: 0 50px;
                 }
                 #twitter {
-                    background: url(../images/twitter.png) right;
+                    background: url(../assets/twitter.png) right;
                 }
                 #twitter:hover {
                     background-position: 0 50px;
@@ -177,19 +177,19 @@ section {
     text-align: center;
     opacity: .3;
     .arrow-down {
-        background: url(../images/arrow-down.png) center;
+        background: url(../assets/arrow-down.png) center;
         width: 70px;
         height: 70px;
     }
     .arrow-up {
-        background: url(../images/arrow-up.png) center;
+        background: url(../assets/arrow-up.png) center;
         width: 70px;
         height: 70px;
     }
 }
 
 #home {
-    background: url(../images/concierge.jpg) top center;
+    background: url(../assets/concierge.jpg) top center;
     .content {
         text-align: center; 
         margin-top: 360px;
@@ -237,6 +237,18 @@ section {
 
 #discover {
     background-color: @midgrey;
+    #bgvid {
+        position: absolute;
+        bottom: 50%; 
+        right: 50%;
+        transform: translateX(-50%) translateY(-50%)
+        min-width: 100%; 
+        min-height: 100%; 
+        width: auto; 
+        height: auto;
+        z-index: -1000; 
+        overflow: hidden
+    }
     .content {
         margin-top: 30px;
         text-align: center;
@@ -271,7 +283,7 @@ section {
     #lohtus-overlay {
         z-index: 1;
         position: absolute;
-        background: url(../images/lohtus-trans.png) top center;
+        background: url(../assets/lohtus-trans.png) top center;
         width: 1000px;
         height: 800px;
         left: 50%;
@@ -292,7 +304,7 @@ section {
 
 #locations {
     background-color: @pink;
-    background: url(../images/skylinetrans.png) center bottom;
+    background: url(../assets/skylinetrans.png) center bottom;
 }
 
 #contact {

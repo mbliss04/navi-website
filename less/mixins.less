@@ -1,3 +1,19 @@
+.ghostbutton {
+    padding: 20px;
+    font-family: 'Quicksand', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    margin: 0 auto;
+    .transition(background-color 0.3s ease-in-out);
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
+}
 .text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
         text-shadow: @string;
 }

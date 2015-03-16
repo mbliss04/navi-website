@@ -1,0 +1,113 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* Colors */
+/* Screen */
+/* Heights */
+/* Fonts */
+/* Mobile */
+form {
+  font-family: Arial, sans-serif;
+  color: #404040;
+  line-height: 14px;
+}
+form input,
+form textarea {
+  font-size: 14px;
+  border: none;
+  height: 2.8em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  padding: 0;
+  text-indent: 10px;
+  height: 2.5em;
+}
+form input:focus,
+form textarea:focus {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  outline: none;
+  border-color: #f05252;
+  box-shadow: 0 0 5px #f05252;
+}
+form button {
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  height: 2.5em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #f05252;
+  border: 1px solid #f05252;
+  width: 10%;
+  color: white;
+  font-family: 'satelliteregular', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #ef4949;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ef4949 0%, #f15b5b 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef4949), color-stop(100%, #f15b5b));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ef4949 0%, #f15b5b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ef4949 0%, #f15b5b 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ef4949 0%, #f15b5b 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ef4949 0%, #f15b5b 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten(@color, @coef)', endColorstr='darken(@color, @coef)', GradientType=0);
+  /* IE6-9 */
+}
+form button:hover {
+  background: #ee3b3b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ee3b3b 0%, #f26969 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee3b3b), color-stop(100%, #f26969));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ee3b3b 0%, #f26969 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ee3b3b 0%, #f26969 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ee3b3b 0%, #f26969 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ee3b3b 0%, #f26969 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten(@color, @coef)', endColorstr='darken(@color, @coef)', GradientType=0);
+  /* IE6-9 */
+}
+.signup-success {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 50px;
+  display: inline-block;
+  margin: auto;
+  margin-top: 15px;
+  line-height: 50px;
+  padding: 0 20px;
+}

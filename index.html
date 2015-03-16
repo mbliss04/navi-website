@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="images/favicon.ico" rel="shortcut icon">
+    <link href="assets/favicon.ico" rel="shortcut icon">
     <!-- CSS -->
     <link rel="stylesheet" type="css/text" href="css/screen.css" >
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
@@ -46,9 +46,7 @@
     </section>
     <section id="app">
         <div id="iphone-app" title="Iphone App"></div>
-    </section>
-    <section id="discover">
-<!--         <h1>Stop wasting free time</h1>
+        <!--         <h1>Stop wasting free time</h1>
         <h4>Discover personalized suggestions based on:</h4>
         <ul id="features-animated" class="discover-row">
             <li class="feature weather"><label>Weather</label></li>
@@ -61,17 +59,29 @@
         <div class="feature-desc-wrapper">
             <div id="feature-description"></div>
         </div> -->
-        <div id="video"><iframe src="https://player.vimeo.com/video/109642918" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </section>
+    <section id="discover">
+        <div id="video-overlays">
+            <h1>Plan less. Do more.</h1>
+            <button id="js-show-video">Watch the full video</button>
+        </div>
+        <div id="discover-video" class="hidden">
+            <iframe width="420" height="315" src="https://player.vimeo.com/video/109642918"></iframe>
+        </div>
+        <video class="center" autoplay loop poster="assets/discover.jpg" id="bgvid">
+            <source src="assets/discover-video.webm" type="video/webm">
+            <source src="assets/discover-video.mp4" type="video/mp4">
+        </video>
     </section>
     <section id="team">
-        <h3>Meet the team</h3>
+        <h3>The team</h3>
         <ul>
-            <li><a href="#"><img src="images/marcy.png" alt="Marcy"></a>
-                <span>Marcy</span>
+            <li><a href="#"><img src="assets/marcy.png" alt="Marcy"></a>
+                <span>Marcy Regalado</span>
                 <p>CEO and Co Founder of Navi and lohtuslabs, and a thinker and innovator at her core. Marcy is studying Engineering Psychology (Human Factors) at Tufts University. Create. Design. Produce.</p>
             </li>
-            <li><a href="http://mccallbliss.com" targe="_blank"><img src="images/mccall.png" alt="McCall"></a>
-                <span>McCall</span>
+            <li><a href="http://mccallbliss.com" targe="_blank"><img src="assets/mccall.png" alt="McCall"></a>
+                <span>McCall Bliss</span>
                 <p>CTO for Navi and co-founder of lohtuslabs, McCall is a creator at heart. She is studying computer science and multimedia arts at Tufts University.</p>
             </li>
         </ul>
@@ -94,7 +104,7 @@
     <!-- Footer -->
     <footer>
         <div class="arrow arrow-down"></div>
-    </footer>e
+    </footer>
     <!-- JAVASCRIPT -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>

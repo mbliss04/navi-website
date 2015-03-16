@@ -67,6 +67,19 @@ $( document ).ready(function() {
                               : navbar.toggleNav({ style : 'expanded' });
     }, { offset: navHeight });
 
+    // Video show and hide on click
+    var video = $('#discover-video');
+    $('#js-show-video').click(function(){
+        video.removeClass('hidden').fadeIn(500);
+        $('#bgvid').get(0).pause();
+    });
+    video.click(function(){
+        video.fadeOut(500);
+        $('#bgvid').get(0).play();
+        setTimeout(function(){
+          video.addClass('hidden')
+        }, 3000);
+    });
 
     // Features Icon module
     var features = (function() {
@@ -115,19 +128,19 @@ $( document ).ready(function() {
     })();
 
     // show features once reach discover section of the page
-    $('#discover').waypoint(function() {
-        if (features.isShowing() == false) {
-            features.initializeFeatures();
-        }
-    }, { offset: featureTrigger });
+    // $('#discover').waypoint(function() {
+    //     if (features.isShowing() == false) {
+    //         features.initializeFeatures();
+    //     }
+    // }, { offset: featureTrigger });
  
-    $('#features-animated li').mouseover(function(){
-        features.toggleFeatureDescription(this, "show");
-        console.log('showing: ' + this.className)
-    }).mouseout(function(){
-        console.log('hiding: ' + this.className)
-        features.toggleFeatureDescription(this);
-    });
+    // $('#features-animated li').mouseover(function(){
+    //     features.toggleFeatureDescription(this, "show");
+    //     console.log('showing: ' + this.className)
+    // }).mouseout(function(){
+    //     console.log('hiding: ' + this.className)
+    //     features.toggleFeatureDescription(this);
+    // });
 
     var arrow = (function(navbar){
         var $el = $('footer .arrow');
@@ -160,6 +173,7 @@ $( document ).ready(function() {
         }
     })();
 
+    // Once reaches the last page, switch the arrow direction
     $('#contact').waypoint(function() {
         arrow.toggleArrow();
     }, { offset: navHeight });
@@ -167,7 +181,6 @@ $( document ).ready(function() {
     $('.arrow').click(function(){
         navigateToSection(navbar);
     });
-
 
     // Post the signup form user email
     $('#signup-form').submit(function(e){
@@ -181,6 +194,7 @@ $( document ).ready(function() {
         e.preventDefault();
     });
 
+    // Submit the form after submitting a contact request
     $('#contact-form').submit(function(e){
         var that = this;
         $.post("contact.php", $(that).serialize()).done(function(data){
@@ -189,6 +203,7 @@ $( document ).ready(function() {
         e.preventDefault();
     });
 
+    // Submit the email after someone hits enter
     function showSuccess(that) {
         $('#signup-email').val("");
         var $signup = $(that).find('.signup-success');

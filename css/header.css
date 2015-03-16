@@ -1,0 +1,140 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* Colors */
+/* Screen */
+/* Heights */
+/* Fonts */
+/* Mobile */
+header {
+  z-index: 7;
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: #000000;
+  -moz-box-shadow: #000000;
+  box-shadow: #000000;
+}
+header #logo {
+  background: url('../assets/logo.png') top left no-repeat;
+  margin-top: 8px;
+  margin-left: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  float: left;
+}
+header #logo:hover {
+  cursor: pointer;
+}
+header ul {
+  display: inline-block;
+  float: right;
+  padding-right: 15px;
+  padding-top: 7px;
+  height: auto;
+}
+header ul li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 2px;
+}
+header ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header ul li#fbook {
+  background: url(../assets/fbook.png) right;
+}
+header ul li#fbook:hover {
+  background-position: 0 50px;
+}
+header ul li#gplus {
+  background: url(../assets/gplus.png) right;
+}
+header ul li#gplus:hover {
+  background-position: 0 50px;
+}
+header ul li#twitter {
+  background: url(../assets/twitter.png) right;
+}
+header ul li#twitter:hover {
+  background-position: 0 50px;
+}
+header ul li:hover {
+  cursor: pointer;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+footer .arrow {
+  position: relative;
+  display: block;
+  z-index: 900;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  margin: 10px auto;
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  -webkit-opacity: 0.4;
+  opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+  filter: alpha(opacity=40);
+  -webkit-transition: 400ms ease-in-out;
+  -moz-transition: 400ms ease-in-out;
+  -ms-transition: 400ms ease-in-out;
+  -o-transition: 400ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out ease-out;
+  -moz-transition: all 400ms ease-in-out ease-out;
+  -o-transition: all 400ms ease-in-out ease-out;
+  transition: all 400ms ease-in-out ease-out;
+}
+footer .arrow.arrow-up {
+  background: url(../assets/arrow-up.png) center top no-repeat;
+}
+footer .arrow.arrow-down {
+  background: url(../assets/arrow-down.png) center top no-repeat;
+}
+footer .arrow:hover {
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  -webkit-opacity: 0.7;
+  opacity: 0.7;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+  filter: alpha(opacity=70);
+  margin-top: 4px;
+}
+@media (max-width: 400px) {
+  header {
+    height: 50px;
+  }
+  header #logo {
+    background: url('../assets/n.png') top left no-repeat;
+    margin: 0 auto;
+    width: 84px;
+    height: 50px;
+  }
+  header #social {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}

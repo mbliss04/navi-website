@@ -41,11 +41,13 @@ h3 {
 
 section {
     display: block;
-    height: 100vh;
-    min-height: 600px;
     overflow: hidden;
     .box-shadow(0px 2px 5px black);
 }
+
+.center { margin: 0 auto; }
+
+.hidden { display: none }
 
 /* Preloader */
 
@@ -65,7 +67,7 @@ section {
     position:absolute;
     left:50%; /* centers the loading animation horizontally one the screen */
     top:50%; /* centers the loading animation vertically one the screen */
-    background-image:url(../images/navi-loader.gif); /* path to your loading animation */
+    background-image:url(../assets/navi-loader.gif); /* path to your loading animation */
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */

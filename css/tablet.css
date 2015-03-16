@@ -1,0 +1,22 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* Colors */
+/* Screen */
+/* Heights */
+/* Fonts */
+/* Mobile */
+@media (min-width: 400px) and (max-width: 670px) {
+  #home {
+    background: url(../assets/concierge-tablet.jpg) top right no-repeat;
+  }
+  #home div h3 {
+    font-size: 1.2em;
+  }
+  #locations {
+    background: url(../assets/boston-skyline-tablet.jpg) right center no-repeat;
+  }
+}
